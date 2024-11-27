@@ -86,8 +86,14 @@ button {
   background: $btn-bg-color;
   font-size: 5dvw;
   border: 1px solid white;
+  box-shadow: 5px 5px 5px gray;
+  cursor: pointer;
   border-radius: 10px;
-  transition: background-color 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+
+  &:hover {
+    transform: scale(1.05);
+  }
 
   &.active {
     background: $btn-active-color;
