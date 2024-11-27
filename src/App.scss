@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Marmelad&display=swap");
+
+$font-marmelad: "Marmelad", sans-serif;
+$btn-font-color: #9147b4;
+$btn-bg-color: rgba(255, 255, 255, 0.24);
+$title-color: #085836;
+$btn-active-color: rgba(145, 71, 180, 0.4);
+$btn-download-color: #085836;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-image: url(/bg.png);
+  background-size: cover;
+  min-height: 100svh;
+  min-width: 100svw;
+  display: flex;
+  justify-content: center;
+  font-family: $font-marmelad;
+}
+
+header {
+  display: flex;
+  width: 80dvw;
+  justify-content: space-between;
+  align-items: center;
+  margin-block: 2vh;
+}
+
+.header-title {
+  font-size: 8dvw;
+  color: $title-color;
+}
+
+.header-logo {
+  color: white;
+  font-family: Marmelad;
+  font-size: 10dvh;
+  font-weight: 400;
+  text-align: right;
+  opacity: 50%;
+}
+
+.canvas {
+  width: 80dvw;
+  aspect-ratio: 0.95;
+  background: white;
+  margin-inline: auto;
+  margin-bottom: 3dvh;
+  position: relative;
+
+  .sky {
+    position: absolute;
+    width: 40dvw;
+    margin: 2vw;
+  }
+
+  .mountain {
+    position: absolute;
+    bottom: 0;
+    width: 80dvw;
+  }
+
+  img {
+    width: 100%;
+    display: block;
+  }
+}
+
+.btn-container {
+  display: flex;
+  flex-direction: column;
+  gap: 1dvh;
+}
+
+button {
+  margin-inline: auto;
+  text-align: center;
+  width: 80dvw;
+  aspect-ratio: 6;
+  color: $btn-font-color;
+  background: $btn-bg-color;
+  font-size: 5dvw;
+  border: 1px solid white;
+  border-radius: 10px;
+  transition: background-color 0.3s ease;
+
+  &.active {
+    background: $btn-active-color;
+  }
+}
+
+.download {
+  color: $btn-download-color;
+}
